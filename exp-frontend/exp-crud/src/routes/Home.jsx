@@ -1,9 +1,12 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { FaEdit } from 'react-icons/fa';
 
 import "../styles/Home.css";
 
 const Home = () => {
     const [experimento, setExperimento] = useState([]);
+    const navegar = useNavigate()
 
     useEffect(() => {
         fetchExperimento();
@@ -19,9 +22,18 @@ const Home = () => {
         }
     };
 
+    const handleCriarExperimento = () => {
+        navegar('/experimento')
+    }
+
+    const handleEditExperimento = (id) => {
+        navegar(`/experimento/${id}`)
+    }
+
     return (
         <div>
             <h1>Home</h1>
+            <button onClick={handleCriarExperimento}>Criar Experimento</button>
             <table>
                 <thead>
                     <tr>
@@ -40,6 +52,11 @@ const Home = () => {
                             <td>{experimento.descricao}</td>
                             <td>{experimento.data}</td>
                             <td>{experimento.responsavel}</td>
+                            <td>
+                                <button onClick={() => handleEditExperimento(experimento.experimento_id)}>
+                                    <FaEdit />
+                                </button>
+                            </td>
                         </tr>
                     ))}
                 </tbody>

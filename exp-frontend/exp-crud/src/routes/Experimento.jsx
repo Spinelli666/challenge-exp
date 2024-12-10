@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 
 const Experimento = () => {
     const [nome, setNome] = useState("");
     const [descricao, setDescricao] = useState("");
     const [dataCriacao, setDataCriacao] = useState("");
     const [responsavel, setResponsavel] = useState("");
+    const navegar = useNavigate()
 
     const addExperimento = async (e) => {
         e.preventDefault(); 
@@ -27,14 +29,20 @@ const Experimento = () => {
 
             const data = await response.json();
             console.log(data);
+            navegar('/')
         } catch (err) {
             console.log(err);
         }
     };
 
+    const handleBackHome = () => {
+        navegar('/')
+    }
+
     return (
         <div>
             <h2>Página para Cadastro de Experimento</h2>
+            <button onClick={handleBackHome}>Voltar</button>
             <form onSubmit={addExperimento}>
                 <div>
                     <label>Nome do Experimento: </label>
