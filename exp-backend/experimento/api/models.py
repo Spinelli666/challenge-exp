@@ -6,6 +6,8 @@ class Experimento(models.Model):
     descricao = models.TextField()
     data = models.DateField()
     responsavel = models.CharField(max_length=100)
+    trafego = models.IntegerField(default=0)
+    amostras = models.JSONField(default=list)
 
     def __str__(self):
         return self.nome

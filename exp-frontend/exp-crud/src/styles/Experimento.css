@@ -1,0 +1,174 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid {
+    width: 1000px; /* Aumenta a largura máxima do contêiner */
+    margin: 50px auto;
+    padding: 50px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    margin: 0;
+    text-align: center;
+}
+
+.back-button {
+    align-self: flex-end; /* Alinha o botão à direita */
+    padding: 10px 20px;
+    background-color: #ff0000; /* Altera a cor de fundo para vermelho */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px; /* Adiciona espaçamento entre o título e o botão */
+}
+
+.back-button:hover {
+    background-color: #cc0000; /* Altera a cor de fundo ao passar o mouse */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.left-text {
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    resize: none; /* Impede o redimensionamento da caixa de texto */
+    height: 100px; /* Define uma altura fixa para a caixa de texto */
+}
+
+.form-group-inline {
+    display: flex;
+    align-items: center;
+}
+
+.form-group-inline label {
+    white-space: nowrap;
+    margin-right: 10px; /* Ajuste a margem conforme necessário */
+}
+
+.form-group-inline input[type="date"],
+.form-group-inline .react-datepicker-wrapper {
+    width: 10%; /* Ajusta a largura do input */
+}
+
+.form-group-inline input[type="text"],
+.form-group-inline input[type="number"] {
+    width: auto; /* Ajusta a largura do input */
+    flex: none; /* Impede que o input ocupe todo o espaço disponível */
+}
+
+.form-group-inline input[type="number"] {
+    width: 80px; /* Ajusta a largura do input de Tráfego */
+    margin-right: 5px; /* Adiciona espaçamento entre o input e o símbolo de porcentagem */
+}
+
+.form-group-inline p {
+    margin: 0; /* Remove a margem padrão do parágrafo */
+}
+
+.amostra-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-wrap: nowrap; /* Impede a quebra de linha */
+}
+
+.amostra-group label {
+    flex: 0 0 auto; /* Impede que a label ocupe mais espaço do que necessário */
+    margin-right: 10px; /* Adiciona espaçamento entre a label e os inputs */
+}
+
+.amostra-group input {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.amostra-group input[type="number"] {
+    width: 80px; /* Ajusta a largura do input de número das amostras */
+    margin-right: 10px; /* Adiciona espaçamento entre os inputs */
+}
+
+.amostras-container {
+    border: 1px solid #ddd;
+    padding: 50px;
+    border-radius: 5px;
+}
+
+.remove-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ff0000;
+    font-size: 20px;
+}
+
+.remove-button:hover {
+    color: #cc0000;
+}
+
+.add-button {
+    display: block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.add-button:hover {
+    background-color: #218838;
+}
+
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
